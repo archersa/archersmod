@@ -28,7 +28,8 @@ public class MyOreGenerator implements IWorldGenerator {
 	private void generateEnd(World world, Random random, int x, int z) {}
 
 	private void generateSurface(World world, Random random, int x, int z) {
-        this.addOreSpawn(ArchersMod.archersOre, world, random, x, z, 16, 16, 13, 20, 0, 2);
+        this.addOreSpawn(ArchersMod.archersOre, world, random, x, z, 16, 16, 13, 20, 0, 20);
+        this.addOreSpawn(ArchersMod.zagaraniteOre, world, random, x, z, 16, 16, 13, 20, 0, 20);
 	}
 
 	private void addOreSpawn(Block block, World world, Random random,
@@ -40,8 +41,6 @@ public class MyOreGenerator implements IWorldGenerator {
 			int posZ = blockZPos + random.nextInt(maxZ);
 			new WorldGenMinable(block, maxVeinSize).generate(world, random, posX, posY, posZ);
 			}
-			
-		
 	}
 
 	private void generateNether(World world, Random random, int i, int j) {}
