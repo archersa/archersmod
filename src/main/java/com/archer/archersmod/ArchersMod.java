@@ -5,6 +5,7 @@ import net.minecraft.block.material.Material;
 import com.archer.archersmod.blocks.ArchersBlock;
 import com.archer.archersmod.blocks.BlackIce;
 import com.archer.archersmod.blocks.HardDirt;
+import com.archer.archersmod.blocks.Zagaraniteore;
 import com.archer.archersmod.blocks.archersore;
 import com.archer.archersmod.items.ArchersArmor;
 import com.archer.archersmod.items.ArchersAxe;
@@ -82,6 +83,7 @@ public class ArchersMod {
 	public static final Item archersLeggings = new ArchersLeggings(ArmorMaterial.DIAMOND, 3, 2);
 	public static final Item archersBoots = new ArchersBoots(ArmorMaterial.DIAMOND, 3, 3);
 	public static final Item withersEndPick = new WithersEndPick(RUBY2);
+	public static final Block zagaraniteOre = new Zagaraniteore(Material.ground);
 	
 	
 	
@@ -171,6 +173,8 @@ public class ArchersMod {
 			GameRegistry.registerBlock(archersOre, "archersore");
 			
 			GameRegistry.registerBlock(archersBlock, "archersBlock");
+			
+			GameRegistry.registerBlock(zagaraniteOre, "zagaraniteore");
 			
 			
 			
