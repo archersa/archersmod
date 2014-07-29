@@ -5,8 +5,8 @@ import net.minecraft.block.material.Material;
 import com.archer.archersmod.blocks.ArchersBlock;
 import com.archer.archersmod.blocks.BlackIce;
 import com.archer.archersmod.blocks.HardDirt;
-import com.archer.archersmod.blocks.Zagaraniteore;
-import com.archer.archersmod.blocks.archersore;
+import com.archer.archersmod.blocks.ZagaraniteOre;
+import com.archer.archersmod.blocks.ArchersOre;
 import com.archer.archersmod.items.ArchersArmor;
 import com.archer.archersmod.items.ArchersAxe;
 import com.archer.archersmod.items.ArchersBoots;
@@ -21,6 +21,7 @@ import com.archer.archersmod.items.ArchersSword;
 import com.archer.archersmod.items.RubyBlade;
 import com.archer.archersmod.items.SwordHandle;
 import com.archer.archersmod.items.WithersEndPick;
+import com.archer.archersmod.items.ZagaraniteIngot;
 import com.sun.j3d.utils.scenegraph.io.state.javax.media.j3d.MaterialState;
 
 import net.minecraftforge.common.util.EnumHelper;
@@ -68,7 +69,7 @@ public class ArchersMod {
 	
 
 	
-	public static final Block archersOre = new archersore(Material.ground);
+	public static final Block archersOre = new ArchersOre(Material.ground);
 	public static final Item archersIngot = new ArchersIngot();
 	public static final Item archersPick = new ArchersPick(RUBY);
 	public static final Item archersSword = new ArchersSword(RUBY);
@@ -83,7 +84,9 @@ public class ArchersMod {
 	public static final Item archersLeggings = new ArchersLeggings(ArmorMaterial.DIAMOND, 3, 2);
 	public static final Item archersBoots = new ArchersBoots(ArmorMaterial.DIAMOND, 3, 3);
 	public static final Item withersEndPick = new WithersEndPick(RUBY2);
-	public static final Block zagaraniteOre = new Zagaraniteore(Material.ground);
+	public static final Block zagaraniteOre = new ZagaraniteOre(Material.ground);
+	public static final Item zagaraniteIngot = new ZagaraniteIngot();
+
 	
 	
 	
@@ -152,7 +155,8 @@ public class ArchersMod {
 		
 		GameRegistry.addSmelting(Items.beef,new ItemStack(Items.spawn_egg,1,90), 1000F);
 		
-		GameRegistry.addSmelting(archersOre,new ItemStack(archersIngot,1,90), 1000F);
+		GameRegistry.addSmelting(archersOre,new ItemStack(archersIngot), 1000F);
+		GameRegistry.addSmelting(zagaraniteOre,new ItemStack(zagaraniteIngot), 1000F);
 		
 		
 		ItemStack Fishis = new ItemStack(Items.stick);
@@ -213,6 +217,9 @@ public class ArchersMod {
 			GameRegistry.registerItem(rubyChest, "Ruby Chest");
 			GameRegistry.registerItem(rubyLegs, "Ruby Legs");
 			GameRegistry.registerItem(rubyBoots, "Ruby Boots");
+			
+			GameRegistry.registerItem(zagaraniteIngot, "Zagaranite Ingot");
+			
 			
 			
 			

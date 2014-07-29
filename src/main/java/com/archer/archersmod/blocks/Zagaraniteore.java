@@ -10,9 +10,9 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.IIcon;
 
-public class Zagaraniteore extends Block{
+public class ZagaraniteOre extends Block{
 	
-	public Zagaraniteore(Material material){
+	public ZagaraniteOre(Material material){
 		super(material);
 		this.setBlockName("zagaranite_ore");
 		this.setLightLevel(255F);

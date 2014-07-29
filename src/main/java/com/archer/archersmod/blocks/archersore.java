@@ -10,9 +10,9 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.IIcon;
 
-public class archersore extends Block{
+public class ArchersOre extends Block{
 	
-	public archersore(Material material){
+	public ArchersOre(Material material){
 		super(material);
 		this.setBlockName("archers_ore");
 		this.slipperiness = 0F;
