@@ -133,13 +133,13 @@ public class ArchersMod {
 				{" A "," B ", 'A', rubyBlade, 'B', swordHandle});
 		GameRegistry.addRecipe(new ItemStack(archersBlock), new Object []
 				{"AAA","AAA","AAA", 'A', archersIngot});
-		GameRegistry.addRecipe(new ItemStack(archersHelmet), new Object []
+		GameRegistry.addRecipe(new ItemStack(rubyHelm), new Object []
 				{"AAA","A A", 'A', archersIngot});
-		GameRegistry.addRecipe(new ItemStack(archersChestplate), new Object []
+		GameRegistry.addRecipe(new ItemStack(rubyChest), new Object []
 				{"A A","AAA","AAA", 'A', archersIngot});
-		GameRegistry.addRecipe(new ItemStack(archersLeggings), new Object []
+		GameRegistry.addRecipe(new ItemStack(rubyLegs), new Object []
 				{"AAA","A A","A A",  'A', archersIngot});
-		GameRegistry.addRecipe(new ItemStack(archersBoots), new Object []
+		GameRegistry.addRecipe(new ItemStack(rubyBoots), new Object []
 				{"A A","A A", 'A', archersIngot});
 
 
@@ -195,13 +195,13 @@ public class ArchersMod {
 			
 			GameRegistry.registerItem(rubyBlade, "rubyblade");
 			
-			GameRegistry.registerItem(archersHelmet, "archershelmet");
-			
-			GameRegistry.registerItem(archersChestplate, "archerchestplate");
-			
-			GameRegistry.registerItem(archersLeggings, "archersleggings");
-			
-			GameRegistry.registerItem(archersBoots, "archersboots");
+//			GameRegistry.registerItem(archersHelmet, "archershelmet");
+//			
+//			GameRegistry.registerItem(archersChestplate, "archerchestplate");
+//			
+//			GameRegistry.registerItem(archersLeggings, "archersleggings");
+//			
+//			GameRegistry.registerItem(archersBoots, "archersboots");
 			
 			GameRegistry.registerItem(withersEndPick, "withersendpick");
 			
