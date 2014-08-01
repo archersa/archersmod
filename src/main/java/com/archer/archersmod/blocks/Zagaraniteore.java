@@ -16,7 +16,7 @@ public class ZagaraniteOre extends Block{
 		super(material);
 		this.setBlockName("zagaranite_ore");
 		this.setLightLevel(255F);
-		this.setLightOpacity(0);
+		this.setHardness(1F);
 		this.setHardness(5F);
 		this.setBlockTextureName(ArchersMod.modid + ":" + "zagaranite_ore");
 		this.setCreativeTab(CreativeTabs.tabBlock);

@@ -15,7 +15,7 @@ public class ArchersOre extends Block{
 	public ArchersOre(Material material){
 		super(material);
 		this.setBlockName("archers_ore");
-		this.slipperiness = 0F;
+		this.setStepSound(soundTypeMetal);
 		this.setHardness(5F);
 		this.setBlockTextureName(ArchersMod.modid + ":" + "archers_ore");
 		this.setCreativeTab(CreativeTabs.tabBlock);

@@ -18,10 +18,12 @@ import com.archer.archersmod.items.ArchersLeggings;
 import com.archer.archersmod.items.ArchersPick;
 import com.archer.archersmod.items.ArchersSpade;
 import com.archer.archersmod.items.ArchersSword;
+import com.archer.archersmod.items.ItemBlasterRifle;
 import com.archer.archersmod.items.RubyBlade;
 import com.archer.archersmod.items.SwordHandle;
 import com.archer.archersmod.items.WithersEndPick;
 import com.archer.archersmod.items.ZagaraniteIngot;
+import com.archer.archersmod.items.ZagaraniteSword;
 import com.sun.j3d.utils.scenegraph.io.state.javax.media.j3d.MaterialState;
 
 import net.minecraftforge.common.util.EnumHelper;
@@ -86,6 +88,8 @@ public class ArchersMod {
 	public static final Item withersEndPick = new WithersEndPick(RUBY2);
 	public static final Block zagaraniteOre = new ZagaraniteOre(Material.ground);
 	public static final Item zagaraniteIngot = new ZagaraniteIngot();
+	public static final Item zagaraniteSword = new ZagaraniteSword(RUBY);
+	public static final Item itemBlasterRifle = new ItemBlasterRifle(null);
 
 	
 	
@@ -120,8 +124,8 @@ public class ArchersMod {
 	}
 
 	public void MyRecipes() {
-		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.activator_rail),
-				new Object[] {Blocks.acacia_stairs, Blocks.vine});
+		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.mossy_cobblestone),
+				new Object[] {Blocks.cobblestone, Blocks.vine});
 		GameRegistry.addRecipe(new ItemStack(archersAxe), new Object[]
 				{"AA ", "BA ", "B  ", 'A', archersIngot, 'B', Items.stick});
 		GameRegistry.addRecipe(new ItemStack(archersPick), new Object []
@@ -146,24 +150,26 @@ public class ArchersMod {
 				{"AAA","A A","A A",  'A', archersIngot});
 		GameRegistry.addRecipe(new ItemStack(rubyBoots), new Object []
 				{"A A","A A", 'A', archersIngot});
+		GameRegistry.addRecipe(new ItemStack(zagaraniteIngot), new Object []
+				{"A","A","B", 'A', zagaraniteIngot, 'B', Items.stick});
+		GameRegistry.addRecipe(new ItemStack(zagaraniteSword), new Object []
+				{" A "," A ", "B", 'A', zagaraniteIngot, 'B', Items.stick});
 
-
-
 		
 		
 		
 		
-		GameRegistry.addSmelting(Items.beef,new ItemStack(Items.spawn_egg,1,90), 1000F);
+		
 		
 		GameRegistry.addSmelting(archersOre,new ItemStack(archersIngot), 1000F);
 		GameRegistry.addSmelting(zagaraniteOre,new ItemStack(zagaraniteIngot), 1000F);
 		
 		
-		ItemStack Fishis = new ItemStack(Items.stick);
+		ItemStack PointedSword = new ItemStack(zagaraniteIngot);
 	
-		Fishis.addEnchantment(Enchantment.knockback, 100);
+		PointedSword.addEnchantment(Enchantment.sharpness, 5);
 	
-		GameRegistry.addShapelessRecipe(Fishis, new Object[]{Items.stick});
+		GameRegistry.addShapelessRecipe(PointedSword, new Object[]{zagaraniteIngot});
 		
 		
 	}
@@ -219,6 +225,8 @@ public class ArchersMod {
 			GameRegistry.registerItem(rubyBoots, "Ruby Boots");
 			
 			GameRegistry.registerItem(zagaraniteIngot, "Zagaranite Ingot");
+			GameRegistry.registerItem(zagaraniteSword, "Zagaranite Sword");
+			GameRegistry.registerItem(itemBlasterRifle, "Blaster Rifle");
 			
 			
 			
