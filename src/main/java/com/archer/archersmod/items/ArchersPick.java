@@ -12,24 +12,22 @@ import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemSword;
 import net.minecraft.util.IIcon;
 
-public class ArchersPick extends ItemPickaxe
-{
+public class ArchersPick extends ItemPickaxe {
 
-	public ArchersPick (ToolMaterial material){
+	public ArchersPick(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(CreativeTabs.tabTools);
-		this.setTextureName(ArchersMod.modid + ":"+"archerspick");
+		this.setTextureName(ArchersMod.modid + ":" + "archerspick");
 		this.setUnlocalizedName("Archers Pick");
 		this.setMaxStackSize(1);
 	}
-	
-	
+
 	@SideOnly(Side.CLIENT)
 	private IIcon[] icons;
+
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IIconRegister par1IconRegister)
-	{
-		this.itemIcon = par1IconRegister.registerIcon(ArchersMod.modid + 
-				':'+"archerspick");
+	public void registerIcons(IIconRegister par1IconRegister) {
+		this.itemIcon = par1IconRegister.registerIcon(ArchersMod.modid + ':'
+				+ "archerspick");
 	}
 }

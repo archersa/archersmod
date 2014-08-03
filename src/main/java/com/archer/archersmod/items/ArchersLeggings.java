@@ -11,22 +11,21 @@ import com.archer.archersmod.ArchersMod;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ArchersLeggings extends ItemArmor{
+public class ArchersLeggings extends ItemArmor {
 
-	public ArchersLeggings (ArmorMaterial material, int diamond, int leggings){
+	public ArchersLeggings(ArmorMaterial material, int diamond, int leggings) {
 		super(material, diamond, leggings);
 		this.setCreativeTab(CreativeTabs.tabCombat);
-		this.setTextureName(ArchersMod.modid + ":"+"archersleggings");
+		this.setTextureName(ArchersMod.modid + ":" + "archersleggings");
 		this.setUnlocalizedName("Archers Leggings");
 	}
-	
-	
+
 	@SideOnly(Side.CLIENT)
 	private IIcon[] icons;
+
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IIconRegister par1IconRegister)
-	{
-		this.itemIcon = par1IconRegister.registerIcon(ArchersMod.modid + 
-				':'+"archersleggings");
+	public void registerIcons(IIconRegister par1IconRegister) {
+		this.itemIcon = par1IconRegister.registerIcon(ArchersMod.modid + ':'
+				+ "archersleggings");
 	}
 }

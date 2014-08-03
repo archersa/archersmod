@@ -13,21 +13,19 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class ArchersHelmet extends ItemArmor {
 
-
-	public ArchersHelmet (ArmorMaterial material, int diamond, int helmet){
+	public ArchersHelmet(ArmorMaterial material, int diamond, int helmet) {
 		super(material, diamond, helmet);
 		this.setCreativeTab(CreativeTabs.tabCombat);
-		this.setTextureName(ArchersMod.modid + ":"+"archershelmet");
+		this.setTextureName(ArchersMod.modid + ":" + "archershelmet");
 		this.setUnlocalizedName("Archers Helmet");
 	}
-	
-	
+
 	@SideOnly(Side.CLIENT)
 	private IIcon[] icons;
+
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IIconRegister par1IconRegister)
-	{
-		this.itemIcon = par1IconRegister.registerIcon(ArchersMod.modid + 
-				':'+"archershelmet");
+	public void registerIcons(IIconRegister par1IconRegister) {
+		this.itemIcon = par1IconRegister.registerIcon(ArchersMod.modid + ':'
+				+ "archershelmet");
 	}
 }

@@ -9,25 +9,20 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 
-public class ArchersIngot extends Item
-{
-	public ArchersIngot ()
-	{
+public class ArchersIngot extends Item {
+	public ArchersIngot() {
 		this.setCreativeTab(CreativeTabs.tabMaterials);
-		this.setTextureName(ArchersMod.modid + ":"+"archersIngot");
+		this.setTextureName(ArchersMod.modid + ":" + "archersIngot");
 		this.setUnlocalizedName("Archer's Ingot");
 	}
-	
-	
+
 	@SideOnly(Side.CLIENT)
 	private IIcon[] icons;
+
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IIconRegister par1IconRegister)
-	{
-		this.itemIcon = par1IconRegister.registerIcon(ArchersMod.modid + 
-				':'+"archers_ingot");
+	public void registerIcons(IIconRegister par1IconRegister) {
+		this.itemIcon = par1IconRegister.registerIcon(ArchersMod.modid + ':'
+				+ "archers_ingot");
 	}
 
 }
-
-

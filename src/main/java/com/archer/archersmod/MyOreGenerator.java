@@ -11,37 +11,44 @@ import cpw.mods.fml.common.IWorldGenerator;
 public class MyOreGenerator implements IWorldGenerator {
 
 	@Override
-	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
-        switch(world.provider.dimensionId){
-        case -1:
-            generateNether(world, random, chunkX * 16, chunkZ * 16);
-            break;
-        case 0:
-            generateSurface(world, random, chunkX * 16, chunkZ * 16);
-            break;
-        case 1:
-            generateEnd(world, random, chunkX * 16, chunkZ * 16);
-            break;
-        }
+	public void generate(Random random, int chunkX, int chunkZ, World world,
+			IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
+		switch (world.provider.dimensionId) {
+		case -1:
+			generateNether(world, random, chunkX * 16, chunkZ * 16);
+			break;
+		case 0:
+			generateSurface(world, random, chunkX * 16, chunkZ * 16);
+			break;
+		case 1:
+			generateEnd(world, random, chunkX * 16, chunkZ * 16);
+			break;
+		}
 	}
 
-	private void generateEnd(World world, Random random, int x, int z) {}
+	private void generateEnd(World world, Random random, int x, int z) {
+	}
 
 	private void generateSurface(World world, Random random, int x, int z) {
-        this.addOreSpawn(ArchersMod.archersOre, world, random, x, z, 16, 16, 13, 2, 0, 20);
-        this.addOreSpawn(ArchersMod.zagaraniteOre, world, random, x, z, 16, 16, 13, 2, 0, 20);
+		this.addOreSpawn(ArchersMod.archersOre, world, random, x, z, 16, 16,
+				13, 2, 0, 20);
+		this.addOreSpawn(ArchersMod.zagaraniteOre, world, random, x, z, 16, 16,
+				13, 2, 0, 20);
 	}
 
 	private void addOreSpawn(Block block, World world, Random random,
-			int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY) {
-		
-		for(int i = 0; i < chancesToSpawn; i++){
+			int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize,
+			int chancesToSpawn, int minY, int maxY) {
+
+		for (int i = 0; i < chancesToSpawn; i++) {
 			int posX = blockXPos + random.nextInt(maxX);
-			int posY = minY + random.nextInt(maxY -minY);
+			int posY = minY + random.nextInt(maxY - minY);
 			int posZ = blockZPos + random.nextInt(maxZ);
-			new WorldGenMinable(block, maxVeinSize).generate(world, random, posX, posY, posZ);
-			}
+			new WorldGenMinable(block, maxVeinSize).generate(world, random,
+					posX, posY, posZ);
+		}
 	}
 
-	private void generateNether(World world, Random random, int i, int j) {}
+	private void generateNether(World world, Random random, int i, int j) {
+	}
 }

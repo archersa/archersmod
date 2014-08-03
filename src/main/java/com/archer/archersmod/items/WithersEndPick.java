@@ -11,24 +11,22 @@ import com.archer.archersmod.ArchersMod;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WithersEndPick extends ItemPickaxe{
+public class WithersEndPick extends ItemPickaxe {
 
-
-	public WithersEndPick (ToolMaterial material){
+	public WithersEndPick(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(CreativeTabs.tabTools);
-		this.setTextureName(ArchersMod.modid + ":"+"withersendpick");
+		this.setTextureName(ArchersMod.modid + ":" + "withersendpick");
 		this.setUnlocalizedName("Withers End Pickaxe");
 		this.setMaxStackSize(1);
 	}
-	
-	
+
 	@SideOnly(Side.CLIENT)
 	private IIcon[] icons;
+
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IIconRegister par1IconRegister)
-	{
-		this.itemIcon = par1IconRegister.registerIcon(ArchersMod.modid + 
-				':'+"withersendpick");
+	public void registerIcons(IIconRegister par1IconRegister) {
+		this.itemIcon = par1IconRegister.registerIcon(ArchersMod.modid + ':'
+				+ "withersendpick");
 	}
 }

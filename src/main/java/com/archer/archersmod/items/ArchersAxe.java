@@ -11,22 +11,21 @@ import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemSword;
 import net.minecraft.util.IIcon;
 
-public class ArchersAxe extends ItemSword{
+public class ArchersAxe extends ItemAxe {
 
-	public ArchersAxe (ToolMaterial material){
+	public ArchersAxe(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(CreativeTabs.tabTools);
-		this.setTextureName(ArchersMod.modid + ":"+"archersaxe");
+		this.setTextureName(ArchersMod.modid + ":" + "archersaxe");
 		this.setUnlocalizedName("Archers Axe");
 	}
-	
-	
+
 	@SideOnly(Side.CLIENT)
 	private IIcon[] icons;
+
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IIconRegister par1IconRegister)
-	{
-		this.itemIcon = par1IconRegister.registerIcon(ArchersMod.modid + 
-				':'+"archersaxe");
+	public void registerIcons(IIconRegister par1IconRegister) {
+		this.itemIcon = par1IconRegister.registerIcon(ArchersMod.modid + ':'
+				+ "archersaxe");
 	}
 }

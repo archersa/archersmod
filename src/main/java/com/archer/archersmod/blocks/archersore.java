@@ -10,27 +10,25 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.IIcon;
 
-public class ArchersOre extends Block{
-	
-	public ArchersOre(Material material){
+public class ArchersOre extends Block {
+
+	public ArchersOre(Material material) {
 		super(material);
 		this.setBlockName("archers_ore");
 		this.setStepSound(soundTypeMetal);
 		this.setHardness(5F);
 		this.setBlockTextureName(ArchersMod.modid + ":" + "archers_ore");
 		this.setCreativeTab(CreativeTabs.tabBlock);
-	
+
 	}
-		
-		@SideOnly(Side.CLIENT)
-		private IIcon[] icons;
-		@SideOnly(Side.CLIENT)
-		public void registerIcons(IIconRegister par1IconRegister)
-		{
-			this.blockIcon = par1IconRegister.registerIcon(ArchersMod.modid + 
-					':'+"archers_ore");
-		}
-	
+
+	@SideOnly(Side.CLIENT)
+	private IIcon[] icons;
+
+	@SideOnly(Side.CLIENT)
+	public void registerIcons(IIconRegister par1IconRegister) {
+		this.blockIcon = par1IconRegister.registerIcon(ArchersMod.modid + ':'
+				+ "archers_ore");
+	}
+
 }
-
-
