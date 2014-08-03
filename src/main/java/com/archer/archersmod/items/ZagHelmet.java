@@ -10,14 +10,13 @@ import com.archer.archersmod.ArchersMod;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ZagraniteChestplate extends ItemArmor {
+public class ZagHelmet extends ItemArmor {
 
-	public ZagraniteChestplate(ArmorMaterial material, int diamond,
-			int Chestplate) {
-		super(material, diamond, Chestplate);
+	public ZagHelmet(ArmorMaterial material, int diamond, int helmet) {
+		super(material, diamond, helmet);
 		this.setCreativeTab(CreativeTabs.tabCombat);
-		this.setTextureName(ArchersMod.modid + ":" + "zagranite_chestplate");
-		this.setUnlocalizedName("zagranite_chestplate");
+		this.setTextureName(ArchersMod.modid + ":" + "zag_helmet");
+		this.setUnlocalizedName("zag_helmet");
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -26,7 +25,6 @@ public class ZagraniteChestplate extends ItemArmor {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister par1IconRegister) {
 		this.itemIcon = par1IconRegister.registerIcon(ArchersMod.modid + ':'
-				+ "zagranite_chestplate");
+				+ "zag_helmet");
 	}
-
 }

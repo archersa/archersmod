@@ -2,8 +2,7 @@ package com.archer.archersmod.items;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemSword;
-import net.minecraft.potion.Potion;
+import net.minecraft.item.ItemPickaxe;
 import net.minecraft.util.IIcon;
 
 import com.archer.archersmod.ArchersMod;
@@ -11,14 +10,13 @@ import com.archer.archersmod.ArchersMod;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ZagraniteSword extends ItemSword {
+public class ZagPickaxe extends ItemPickaxe {
 
-	public ZagraniteSword(ToolMaterial material) {
+	public ZagPickaxe(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(CreativeTabs.tabTools);
-		this.setPotionEffect(Potion.moveSpeed.getName());
-		this.setTextureName(ArchersMod.modid + ":" + "zagranite_sword");
-		this.setUnlocalizedName("zagranite_sword");
+		this.setTextureName(ArchersMod.modid + ":" + "zag_pickaxe");
+		this.setUnlocalizedName("zag_pickaxe");
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -27,6 +25,6 @@ public class ZagraniteSword extends ItemSword {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister par1IconRegister) {
 		this.itemIcon = par1IconRegister.registerIcon(ArchersMod.modid + ':'
-				+ "zagranite_sword");
+				+ "zag_pickaxe");
 	}
 }

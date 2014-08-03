@@ -2,7 +2,8 @@ package com.archer.archersmod.items;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemSword;
+import net.minecraft.potion.Potion;
 import net.minecraft.util.IIcon;
 
 import com.archer.archersmod.ArchersMod;
@@ -10,13 +11,14 @@ import com.archer.archersmod.ArchersMod;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ZagraniteHelmet extends ItemArmor {
+public class ZagSword extends ItemSword {
 
-	public ZagraniteHelmet(ArmorMaterial material, int diamond, int helmet) {
-		super(material, diamond, helmet);
-		this.setCreativeTab(CreativeTabs.tabCombat);
-		this.setTextureName(ArchersMod.modid + ":" + "zagranite_helmet");
-		this.setUnlocalizedName("zagranite_helmet");
+	public ZagSword(ToolMaterial material) {
+		super(material);
+		this.setCreativeTab(CreativeTabs.tabTools);
+		this.setPotionEffect(Potion.moveSpeed.getName());
+		this.setTextureName(ArchersMod.modid + ":" + "zag_sword");
+		this.setUnlocalizedName("zag_sword");
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -25,6 +27,6 @@ public class ZagraniteHelmet extends ItemArmor {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister par1IconRegister) {
 		this.itemIcon = par1IconRegister.registerIcon(ArchersMod.modid + ':'
-				+ "zagranite_helmet");
+				+ "zag_sword");
 	}
 }

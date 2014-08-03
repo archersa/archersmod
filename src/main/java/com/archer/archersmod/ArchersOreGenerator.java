@@ -32,8 +32,8 @@ public class ArchersOreGenerator implements IWorldGenerator {
 	private void generateSurface(World world, Random random, int x, int z) {
 		this.addOreSpawn(ArchersMod.rubyOre, world, random, x, z, 16, 16, 13,
 				2, 0, 20);
-		this.addOreSpawn(ArchersMod.zagraniteOre, world, random, x, z, 16, 16,
-				13, 2, 0, 20);
+		this.addOreSpawn(ArchersMod.zagOre, world, random, x, z, 16, 16, 13, 2,
+				0, 20);
 	}
 
 	private void addOreSpawn(Block block, World world, Random random,

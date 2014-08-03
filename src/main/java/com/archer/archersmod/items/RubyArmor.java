@@ -9,8 +9,8 @@ import com.archer.archersmod.ArchersMod;
 
 public class RubyArmor extends ItemArmor {
 
-//	private String[] armorTypes = { "rubyHelm", "rubyChest", "rubyLegs",
-//			"rubyBoots" };
+	// private String[] armorTypes = { "rubyHelm", "rubyChest", "rubyLegs",
+	// "rubyBoots" };
 
 	public RubyArmor(ArmorMaterial material, int armorIndex, int armorType) {
 		super(material, armorIndex, armorType);

@@ -3,28 +3,28 @@
 # ##########################################################
 
 # Zagranite blocks
-tile.zagranite_ore.name=Zagranite Ore
+tile.zag_ore.name=Zagranite Ore
 
 # Zagranite items
-item.zagranite_axe.name=Zagranite Axe
-item.zagranite_blade.name=Zagranite Blade
-item.zagranite_ingot.name=Zagranite Ingot
-item.zagranite_pickaxe.name=Zagranite Pickaxe
-#item.zagranite_spade.name=Zagranite Spade
-item.zagranite_sword.name=Zagranite Sword
+item.zag_axe.name=Zagranite Axe
+item.zag_blade.name=Zagranite Blade
+item.zag_ingot.name=Zagranite Ingot
+item.zag_pickaxe.name=Zagranite Pickaxe
+#item.zag_spade.name=Zagranite Spade
+item.zag_sword.name=Zagranite Sword
 
 # Zagranite armor
-item.zagranite_boots_armor.name=Zagranite Boots
-item.zagranite_chestplate_armor.name=Zagranite Chestplate
-item.zagranite_helmet_armor.name=Zagranite Helmet
-item.zagranite_leggings_armor.name=Zagranite Leggings
+item.zag_boots_armor.name=Zagranite Boots
+item.zag_chestplate_armor.name=Zagranite Chestplate
+item.zag_helmet_armor.name=Zagranite Helmet
+item.zag_leggings_armor.name=Zagranite Leggings
 
 
 # ##########################################################
 # Miscellaneous custom stuff
 # ##########################################################
 
-# zagranite items
+# zag items
 #item.custom_sword_handle.name=Custom
 #item.custom_withers_end_pick.name=Custom
 

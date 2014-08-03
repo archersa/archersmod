@@ -11,14 +11,14 @@ import com.archer.archersmod.ArchersMod;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ZagraniteOre extends Block {
+public class ZagOre extends Block {
 
-	public ZagraniteOre(Material material) {
+	public ZagOre(Material material) {
 		super(material);
-		this.setBlockName("zagranite_ore");
+		this.setBlockName("zag_ore");
 		this.setLightLevel(255F);
 		this.setHardness(1F);
-		this.setBlockTextureName(ArchersMod.modid + ":" + "zagranite_ore");
+		this.setBlockTextureName(ArchersMod.modid + ":" + "zag_ore");
 		this.setCreativeTab(CreativeTabs.tabBlock);
 
 	}

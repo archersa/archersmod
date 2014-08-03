@@ -14,7 +14,7 @@ import net.minecraftforge.common.util.EnumHelper;
 import com.archer.archersmod.blocks.BlackIce;
 import com.archer.archersmod.blocks.RubyBlock;
 import com.archer.archersmod.blocks.RubyOre;
-import com.archer.archersmod.blocks.ZagraniteOre;
+import com.archer.archersmod.blocks.ZagOre;
 import com.archer.archersmod.items.RubyArmor;
 import com.archer.archersmod.items.RubyAxe;
 import com.archer.archersmod.items.RubyBlade;
@@ -25,14 +25,12 @@ import com.archer.archersmod.items.RubySpade;
 import com.archer.archersmod.items.RubySword;
 import com.archer.archersmod.items.SwordHandle;
 import com.archer.archersmod.items.WithersEndPick;
-import com.archer.archersmod.items.ZagraniteArmor;
-import com.archer.archersmod.items.ZagraniteAxe;
-import com.archer.archersmod.items.ZagraniteBlade;
-import com.archer.archersmod.items.ZagraniteChestplate;
-import com.archer.archersmod.items.ZagraniteHelmet;
-import com.archer.archersmod.items.ZagraniteIngot;
-import com.archer.archersmod.items.ZagranitePickaxe;
-import com.archer.archersmod.items.ZagraniteSword;
+import com.archer.archersmod.items.ZagArmor;
+import com.archer.archersmod.items.ZagAxe;
+import com.archer.archersmod.items.ZagBlade;
+import com.archer.archersmod.items.ZagIngot;
+import com.archer.archersmod.items.ZagPickaxe;
+import com.archer.archersmod.items.ZagSword;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.Mod;
@@ -66,14 +64,14 @@ public class ArchersMod {
 	public static final Item rubyBootsArmor = new RubyArmor(RUBY3, 5, 3)
 			.setUnlocalizedName("ruby_boots_armor");
 
-	public static final Item zagraniteHelmetArmor = new ZagraniteArmor(RUBY3,
-			5, 0).setUnlocalizedName("zagranite_helmet_armor");
-	public static final Item zagraniteChestplateArmor = new ZagraniteArmor(
-			RUBY3, 5, 1).setUnlocalizedName("zagranite_chestplate_armor");
-	public static final Item zagraniteLeggingsArmor = new ZagraniteArmor(RUBY3,
-			5, 2).setUnlocalizedName("zagranite_leggings_armor");
-	public static final Item zagraniteBootsArmor = new ZagraniteArmor(RUBY3, 5,
-			3).setUnlocalizedName("zagranite_boots_armor");
+	public static final Item zagHelmetArmor = new ZagArmor(RUBY3, 5, 0)
+			.setUnlocalizedName("zag_helmet_armor");
+	public static final Item zagChestplateArmor = new ZagArmor(RUBY3, 5, 1)
+			.setUnlocalizedName("zag_chestplate_armor");
+	public static final Item zagLeggingsArmor = new ZagArmor(RUBY3, 5, 2)
+			.setUnlocalizedName("zag_leggings_armor");
+	public static final Item zagBootsArmor = new ZagArmor(RUBY3, 5, 3)
+			.setUnlocalizedName("zag_boots_armor");
 
 	public static final Block rubyOre = new RubyOre(Material.ground);
 	public static final Item rubyIngot = new RubyIngot();
@@ -85,27 +83,15 @@ public class ArchersMod {
 	public static final Block rubyBlock = new RubyBlock(Material.ground);
 	public static final Item swordHandle = new SwordHandle();
 	public static final Item rubyBlade = new RubyBlade();
-	// public static final Item archersHelmet = new RubyHelmet(
-	// ArmorMaterial.DIAMOND, 3, 0);
-	// public static final Item rubyChestplate = new RubyChestplate(
-	// ArmorMaterial.DIAMOND, 3, 1);
-	// public static final Item rubyLeggings = new RubyLeggings(
-	// ArmorMaterial.DIAMOND, 3, 2);
-	// public static final Item archersBoots = new RubyBoots(
-	// ArmorMaterial.DIAMOND, 3, 3);
 
 	public static final Item withersEndPick = new WithersEndPick(RUBY2);
-	public static final Block zagraniteOre = new ZagraniteOre(Material.ground);
-	public static final Item zagraniteIngot = new ZagraniteIngot();
-	public static final Item zagraniteSword = new ZagraniteSword(RUBY);
+	public static final Block zagOre = new ZagOre(Material.ground);
+	public static final Item zagIngot = new ZagIngot();
+	public static final Item zagSword = new ZagSword(RUBY);
 	// public static final Item itemBlasterRifle = new ItemBlasterRifle(null);
-	public static final Item zagraniteBlade = new ZagraniteBlade();
-	public static final Item zagraniteAxe = new ZagraniteAxe(RUBY);
-	public static final Item zagranitePickaxe = new ZagranitePickaxe(RUBY);
-	// public static final Item zagraniteHelmet = new ZagraniteHelmet(
-	// ArmorMaterial.DIAMOND, 3, 0);
-	// public static final Item zagraniteChestplate = new ZagraniteChestplate(
-	// ArmorMaterial.DIAMOND, 3, 0);
+	public static final Item zagBlade = new ZagBlade();
+	public static final Item zagAxe = new ZagAxe(RUBY);
+	public static final Item zagPickaxe = new ZagPickaxe(RUBY);
 
 	@Instance(value = "ArchersMod")
 	public static ArchersMod instance;
@@ -163,67 +149,60 @@ public class ArchersMod {
 				"AAA", "A A", "A A", 'A', rubyIngot });
 		GameRegistry.addRecipe(new ItemStack(rubyBootsArmor), new Object[] {
 				"A A", "A A", 'A', rubyIngot });
-		GameRegistry.addRecipe(new ItemStack(zagraniteSword), new Object[] {
-				" A ", " B ", 'A', zagraniteBlade, 'B', swordHandle });
+		GameRegistry.addRecipe(new ItemStack(zagSword), new Object[] { " A ",
+				" B ", 'A', zagBlade, 'B', swordHandle });
 
 		GameRegistry.addSmelting(rubyOre, new ItemStack(rubyIngot), 1000F);
-		GameRegistry.addSmelting(zagraniteOre, new ItemStack(zagraniteIngot),
-				1000F);
+		GameRegistry.addSmelting(zagOre, new ItemStack(zagIngot), 1000F);
 
-		ItemStack PointedSword = new ItemStack(zagraniteIngot);
+		ItemStack PointedSword = new ItemStack(zagIngot);
 
 		PointedSword.addEnchantment(Enchantment.sharpness, 5);
 
-		GameRegistry.addShapelessRecipe(PointedSword,
-				new Object[] { zagraniteIngot });
+		GameRegistry
+				.addShapelessRecipe(PointedSword, new Object[] { zagIngot });
 
 	}
 
 	public void MyBlocks() {
 		Block blackIce = new BlackIce(Material.ground);
-		GameRegistry.registerBlock(blackIce, "Black Ice");
-		GameRegistry.registerBlock(rubyOre, "archersore");
-		GameRegistry.registerBlock(rubyBlock, "archersBlock");
-		GameRegistry.registerBlock(zagraniteOre, "zagraniteore");
+		GameRegistry.registerBlock(blackIce, "black_ice");
+		GameRegistry.registerBlock(rubyOre, "ruby_ore");
+		GameRegistry.registerBlock(rubyBlock, "ruby_block");
+		GameRegistry.registerBlock(zagOre, "zag_ore");
 	}
 
 	public void MyItems() {
-		// Zagranite items
-		GameRegistry.registerItem(zagraniteAxe, "Zagranite Axe");
-		GameRegistry.registerItem(zagraniteBlade, "Zagranite Blade");
-		GameRegistry.registerItem(zagranitePickaxe, "Zagranite Pickaxe");
-		GameRegistry.registerItem(zagraniteIngot, "Zagranite Ingot");
-		GameRegistry.registerItem(zagraniteSword, "Zagranite Sword");
+		// Zag items
+		GameRegistry.registerItem(zagAxe, "zag_axe");
+		GameRegistry.registerItem(zagBlade, "zag_blade");
+		GameRegistry.registerItem(zagPickaxe, "zag_pickaxe");
+		GameRegistry.registerItem(zagIngot, "zag_ingot");
+		GameRegistry.registerItem(zagSword, "zag_sword");
 
-		// Zagranite armor
-		GameRegistry.registerItem(zagraniteBootsArmor, "Zagranite Boots");
-		GameRegistry.registerItem(zagraniteChestplateArmor, "Zagranite Chest");
-		GameRegistry.registerItem(zagraniteHelmetArmor, "Zagranite Helmet");
-		GameRegistry.registerItem(zagraniteLeggingsArmor, "Zagranite Legs");
+		// Zag armor
+		GameRegistry.registerItem(zagBootsArmor, "zag_boots_armor");
+		GameRegistry.registerItem(zagChestplateArmor, "zag_chestplate_armor");
+		GameRegistry.registerItem(zagHelmetArmor, "zag_helmet_armor");
+		GameRegistry.registerItem(zagLeggingsArmor, "zag_leggings_armor");
 
 		// Miscellaneous custom stuff
-		GameRegistry.registerItem(swordHandle, "Sword Handle");
-		GameRegistry.registerItem(withersEndPick, "Wither's End Pick");
+		GameRegistry.registerItem(swordHandle, "sword_handle");
+		GameRegistry.registerItem(withersEndPick, "withers_end_pick");
 
 		// Ruby items
-		GameRegistry.registerItem(rubyAxe, "Ruby Axe");
-		GameRegistry.registerItem(rubyBlade, "Ruby Blade");
-		GameRegistry.registerItem(rubyHoe, "Ruby Hoe");
-		GameRegistry.registerItem(rubyIngot, "Ruby Ingot");
-		GameRegistry.registerItem(rubyPickaxe, "Ruby Pickaxe");
-		GameRegistry.registerItem(rubySpade, "Ruby Spade");
-		GameRegistry.registerItem(rubySword, "Ruby Sword");
+		GameRegistry.registerItem(rubyAxe, "ruby_axe");
+		GameRegistry.registerItem(rubyBlade, "ruby_blade");
+		GameRegistry.registerItem(rubyHoe, "ruby_hoe");
+		GameRegistry.registerItem(rubyIngot, "ruby_ingot");
+		GameRegistry.registerItem(rubyPickaxe, "ruby_pickaxe");
+		GameRegistry.registerItem(rubySpade, "ruby_spade");
+		GameRegistry.registerItem(rubySword, "ruby_sword");
 
 		// Ruby armor
-		GameRegistry.registerItem(rubyBootsArmor, "Ruby Boots ARMOR");
-		GameRegistry
-				.registerItem(rubyChestplateArmor, "Ruby Chest Plate ARMOR");
-		GameRegistry.registerItem(rubyHelmetArmor, "Ruby Helmet ARMOR");
-		GameRegistry.registerItem(rubyLeggingsArmor, "Ruby Legs ARMOR");
-
-		// GameRegistry.registerItem(rubyBoots, "Ruby Boots ITEM");
-		// GameRegistry.registerItem(rubyChestplate, "Ruby Chest Plate ITEM");
-		// GameRegistry.registerItem(rubyHelmet, "Ruby Helmet ITEM");
-		// GameRegistry.registerItem(rubyLeggings, "Ruby Leggings ITEM");
+		GameRegistry.registerItem(rubyBootsArmor, "ruby_boots_armor");
+		GameRegistry.registerItem(rubyChestplateArmor, "ruby_chestplate_armor");
+		GameRegistry.registerItem(rubyHelmetArmor, "ruby_helmet_armor");
+		GameRegistry.registerItem(rubyLeggingsArmor, "ruby_leggings_armor");
 	}
 }
