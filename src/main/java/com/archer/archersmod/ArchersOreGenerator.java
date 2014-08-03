@@ -8,7 +8,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import cpw.mods.fml.common.IWorldGenerator;
 
-public class MyOreGenerator implements IWorldGenerator {
+public class ArchersOreGenerator implements IWorldGenerator {
 
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world,
@@ -30,9 +30,9 @@ public class MyOreGenerator implements IWorldGenerator {
 	}
 
 	private void generateSurface(World world, Random random, int x, int z) {
-		this.addOreSpawn(ArchersMod.archersOre, world, random, x, z, 16, 16,
-				13, 2, 0, 20);
-		this.addOreSpawn(ArchersMod.zagaraniteOre, world, random, x, z, 16, 16,
+		this.addOreSpawn(ArchersMod.rubyOre, world, random, x, z, 16, 16, 13,
+				2, 0, 20);
+		this.addOreSpawn(ArchersMod.zagraniteOre, world, random, x, z, 16, 16,
 				13, 2, 0, 20);
 	}
 

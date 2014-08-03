@@ -2,7 +2,6 @@ package com.archer.archersmod.items;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.util.IIcon;
 
@@ -16,8 +15,8 @@ public class WithersEndPick extends ItemPickaxe {
 	public WithersEndPick(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(CreativeTabs.tabTools);
-		this.setTextureName(ArchersMod.modid + ":" + "withersendpick");
-		this.setUnlocalizedName("Withers End Pickaxe");
+		this.setTextureName(ArchersMod.modid + ":" + "withers_end_pickaxe");
+		this.setUnlocalizedName("withers_end_pickaxe");
 		this.setMaxStackSize(1);
 	}
 
@@ -27,6 +26,6 @@ public class WithersEndPick extends ItemPickaxe {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister par1IconRegister) {
 		this.itemIcon = par1IconRegister.registerIcon(ArchersMod.modid + ':'
-				+ "withersendpick");
+				+ "withers_end_pickaxe");
 	}
 }

@@ -11,13 +11,14 @@ import com.archer.archersmod.ArchersMod;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ArchersBlock extends Block {
+public class RubyOre extends Block {
 
-	public ArchersBlock(Material material) {
+	public RubyOre(Material material) {
 		super(material);
-		this.setBlockName("archers_block");
-		this.setHardness(10F);
-		this.setBlockTextureName(ArchersMod.modid + ":" + "ArchersBlock");
+		this.setBlockName("ruby_ore");
+		this.setStepSound(soundTypeMetal);
+		this.setHardness(5F);
+		this.setBlockTextureName(ArchersMod.modid + ":" + "ruby_ore");
 		this.setCreativeTab(CreativeTabs.tabBlock);
 
 	}
@@ -28,6 +29,7 @@ public class ArchersBlock extends Block {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister par1IconRegister) {
 		this.blockIcon = par1IconRegister.registerIcon(ArchersMod.modid + ':'
-				+ "archers_block");
+				+ "ruby_ore");
 	}
+
 }

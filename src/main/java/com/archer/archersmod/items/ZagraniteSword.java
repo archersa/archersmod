@@ -1,21 +1,24 @@
 package com.archer.archersmod.items;
 
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemSword;
+import net.minecraft.potion.Potion;
+import net.minecraft.util.IIcon;
+
 import com.archer.archersmod.ArchersMod;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemSword;
-import net.minecraft.util.IIcon;
 
-public class ArchersSword extends ItemSword {
-	public ArchersSword(ToolMaterial material) {
+public class ZagraniteSword extends ItemSword {
+
+	public ZagraniteSword(ToolMaterial material) {
 		super(material);
 		this.setCreativeTab(CreativeTabs.tabTools);
-		this.setTextureName(ArchersMod.modid + ":" + "archerssword");
-		this.setUnlocalizedName("Archers Sword");
+		this.setPotionEffect(Potion.moveSpeed.getName());
+		this.setTextureName(ArchersMod.modid + ":" + "zagranite_sword");
+		this.setUnlocalizedName("zagranite_sword");
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -24,7 +27,6 @@ public class ArchersSword extends ItemSword {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister par1IconRegister) {
 		this.itemIcon = par1IconRegister.registerIcon(ArchersMod.modid + ':'
-				+ "archerssword");
+				+ "zagranite_sword");
 	}
-
 }

@@ -1,18 +1,53 @@
-#item.Archers Sword.name=Archer's Sword
-#tile.archers_ore.name=Archer's Ore
-#item.Archers Pick.name=Archer's Pick Axe
-#item.Archers Axe.name=Archer's Axe
-#item.Archers Spade.name=Archer's Spade
-#item.Archers Hoe.name=Archer's Hoe
-#item.Archer's Ingot.name=Archer's Ingot
-#item.Archers Helmet.name=Archer's Helmet
-#item.Archers Chestplate.name=Archer's Chest Plate
-#item.Archers Leggings.name=Archer's Leggings
-#item.Archers Boots.name=Archer's Boots
-#item.Sword Handle.name=Sword Handle
-#item.Ruby Blade.name=Ruby Blade
-#tile.archers_block.name=Archer's Block
-#item.Ruby Chest.name=Archer's Chest Plate
-#item.Ruby Helm.name=Archer's Helmet
-#item.Ruby Boots.name=Archer's Boots
-#item.Ruby Legs.name=Archer's Leggings
+# ##########################################################
+# Zagranite stuff
+# ##########################################################
+
+# Zagranite blocks
+tile.zagranite_ore.name=Zagranite Ore
+
+# Zagranite items
+item.zagranite_axe.name=Zagranite Axe
+item.zagranite_blade.name=Zagranite Blade
+item.zagranite_ingot.name=Zagranite Ingot
+item.zagranite_pickaxe.name=Zagranite Pickaxe
+#item.zagranite_spade.name=Zagranite Spade
+item.zagranite_sword.name=Zagranite Sword
+
+# Zagranite armor
+item.zagranite_boots_armor.name=Zagranite Boots
+item.zagranite_chestplate_armor.name=Zagranite Chestplate
+item.zagranite_helmet_armor.name=Zagranite Helmet
+item.zagranite_leggings_armor.name=Zagranite Leggings
+
+
+# ##########################################################
+# Miscellaneous custom stuff
+# ##########################################################
+
+# zagranite items
+#item.custom_sword_handle.name=Custom
+#item.custom_withers_end_pick.name=Custom
+
+
+# ##########################################################
+# Ruby stuff
+# ##########################################################
+
+# Ruby blocks
+tile.ruby_ore.name=Ruby Ore
+tile.ruby_block.name=Ruby Block
+
+# Ruby items
+item.ruby_axe.name=Ruby Axe
+item.ruby_blade.name=Ruby Blade
+item.ruby_hoe.name=Ruby Hoe
+item.ruby_ingot.name=Ruby Ingot
+item.ruby_pickaxe.name=Ruby Pickaxe
+item.ruby_spade.name=Ruby Spade
+item.ruby_sword.name=Ruby Sword
+
+# Ruby armor
+item.ruby_boots_armor.name=Ruby Boots
+item.ruby_chestplate_armor.name=Ruby Chestplate
+item.ruby_helmet_armor.name=Ruby Helmet
+item.ruby_leggings_armor.name=Ruby Leggings

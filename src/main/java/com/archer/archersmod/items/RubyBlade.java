@@ -14,8 +14,8 @@ public class RubyBlade extends Item {
 
 	public RubyBlade() {
 		this.setCreativeTab(CreativeTabs.tabCombat);
-		this.setTextureName(ArchersMod.modid + ":" + "rubyblade");
-		this.setUnlocalizedName("Ruby Blade");
+		this.setTextureName(ArchersMod.modid + ":" + "ruby_blade");
+		this.setUnlocalizedName("ruby_blade");
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -24,6 +24,6 @@ public class RubyBlade extends Item {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister par1IconRegister) {
 		this.itemIcon = par1IconRegister.registerIcon(ArchersMod.modid + ':'
-				+ "rubyblade");
+				+ "ruby_blade");
 	}
 }

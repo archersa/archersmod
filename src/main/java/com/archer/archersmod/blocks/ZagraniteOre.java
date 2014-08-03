@@ -1,23 +1,24 @@
 package com.archer.archersmod.blocks;
 
-import com.archer.archersmod.ArchersMod;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.IIcon;
 
-public class ZagaraniteOre extends Block {
+import com.archer.archersmod.ArchersMod;
 
-	public ZagaraniteOre(Material material) {
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
+public class ZagraniteOre extends Block {
+
+	public ZagraniteOre(Material material) {
 		super(material);
-		this.setBlockName("zagaranite_ore");
+		this.setBlockName("zagranite_ore");
 		this.setLightLevel(255F);
 		this.setHardness(1F);
-		this.setBlockTextureName(ArchersMod.modid + ":" + "zagaranite_ore");
+		this.setBlockTextureName(ArchersMod.modid + ":" + "zagranite_ore");
 		this.setCreativeTab(CreativeTabs.tabBlock);
 
 	}
