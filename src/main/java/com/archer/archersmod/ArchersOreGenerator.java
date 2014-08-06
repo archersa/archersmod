@@ -27,13 +27,15 @@ public class ArchersOreGenerator implements IWorldGenerator {
 	}
 
 	private void generateEnd(World world, Random random, int x, int z) {
+		this.addOreSpawn(ArchersMod.zagOre, world, random, x, z, 16, 16, 13, 1,
+				0, 10);
 	}
 
 	private void generateSurface(World world, Random random, int x, int z) {
 		this.addOreSpawn(ArchersMod.rubyOre, world, random, x, z, 16, 16, 13,
-				2, 0, 20);
-		this.addOreSpawn(ArchersMod.zagOre, world, random, x, z, 16, 16, 13, 2,
-				0, 20);
+				1, 0, 10);
+		this.addOreSpawn(ArchersMod.zagOre, world, random, x, z, 16, 16, 13, 1,
+				0, 10);
 	}
 
 	private void addOreSpawn(Block block, World world, Random random,

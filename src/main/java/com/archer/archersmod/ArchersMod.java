@@ -28,8 +28,10 @@ import com.archer.archersmod.items.WithersEndPick;
 import com.archer.archersmod.items.ZagArmor;
 import com.archer.archersmod.items.ZagAxe;
 import com.archer.archersmod.items.ZagBlade;
+import com.archer.archersmod.items.ZagHoe;
 import com.archer.archersmod.items.ZagIngot;
 import com.archer.archersmod.items.ZagPickaxe;
+import com.archer.archersmod.items.ZagSpade;
 import com.archer.archersmod.items.ZagSword;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;
@@ -92,6 +94,8 @@ public class ArchersMod {
 	public static final Item zagBlade = new ZagBlade();
 	public static final Item zagAxe = new ZagAxe(RUBY);
 	public static final Item zagPickaxe = new ZagPickaxe(RUBY);
+	public static final Item zagSpade = new ZagSpade(RUBY);
+	public static final Item zagHoe = new ZagHoe(RUBY);
 
 	@Instance(value = "ArchersMod")
 	public static ArchersMod instance;
@@ -123,8 +127,8 @@ public class ArchersMod {
 		GameRegistry.addShapelessRecipe(
 				new ItemStack(Blocks.mossy_cobblestone), new Object[] {
 						Blocks.cobblestone, Blocks.vine });
-		GameRegistry.addRecipe(new ItemStack(rubyAxe), new Object[] { "AA ",
-				"BA ", "B  ", 'A', rubyIngot, 'B', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(rubyAxe), new Object[] {
+				"BB ", "BA "," A ", 'A', Items.stick, 'B', rubyIngot });
 		GameRegistry.addRecipe(new ItemStack(rubyPickaxe), new Object[] {
 				"AAA", " B ", " B ", 'A', rubyIngot, 'B', Items.stick });
 		GameRegistry.addRecipe(new ItemStack(rubySpade), new Object[] { " A ",
@@ -151,6 +155,27 @@ public class ArchersMod {
 				"A A", "A A", 'A', rubyIngot });
 		GameRegistry.addRecipe(new ItemStack(zagSword), new Object[] { " A ",
 				" B ", 'A', zagBlade, 'B', swordHandle });
+		GameRegistry.addRecipe(new ItemStack(zagAxe), new Object[] {
+			"BB ", "BA "," A ", 'A', Items.stick, 'B', zagIngot });
+		GameRegistry.addRecipe(new ItemStack(zagPickaxe), new Object[] {
+			"BBB", " A "," A ", 'A', Items.stick, 'B', zagIngot });
+		GameRegistry.addRecipe(new ItemStack(zagSpade), new Object[] {
+			" B ", " A "," A ", 'A', Items.stick, 'B', zagIngot });
+		GameRegistry.addRecipe(new ItemStack(zagHoe), new Object[] {
+			"BB ", " A "," A ", 'A', Items.stick, 'B', zagIngot });
+		GameRegistry.addRecipe(new ItemStack(zagBlade), new Object[] {
+			 " AA"," AA", 'A', zagIngot });
+		GameRegistry.addRecipe(new ItemStack(withersEndPick), new Object[] {
+			"CAB", " D "," D ", 'A', Items.diamond, 'B', Items.nether_star, 'C', Blocks.dragon_egg, 'D', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(zagChestplateArmor), new Object[] {
+			"B B", "BBB","BBB", 'B', zagIngot });
+		GameRegistry.addRecipe(new ItemStack(zagLeggingsArmor), new Object[] {
+			"BBB", "B B","B B", 'B', zagIngot });
+		GameRegistry.addRecipe(new ItemStack(zagHelmetArmor), new Object[] {
+			"BBB", "B B", 'B', zagIngot });
+		GameRegistry.addRecipe(new ItemStack(zagBootsArmor), new Object[] {
+			"B B", "B B", 'B', zagIngot });
+
 
 		GameRegistry.addSmelting(rubyOre, new ItemStack(rubyIngot), 1000F);
 		GameRegistry.addSmelting(zagOre, new ItemStack(zagIngot), 1000F);
@@ -179,6 +204,8 @@ public class ArchersMod {
 		GameRegistry.registerItem(zagPickaxe, "zag_pickaxe");
 		GameRegistry.registerItem(zagIngot, "zag_ingot");
 		GameRegistry.registerItem(zagSword, "zag_sword");
+		GameRegistry.registerItem(zagSpade, "zag_spade");
+		GameRegistry.registerItem(zagHoe, "zag_Hoe");
 
 		// Zag armor
 		GameRegistry.registerItem(zagBootsArmor, "zag_boots_armor");
