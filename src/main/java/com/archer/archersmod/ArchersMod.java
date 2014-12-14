@@ -15,6 +15,7 @@ import com.archer.archersmod.blocks.BlackIce;
 import com.archer.archersmod.blocks.RubyBlock;
 import com.archer.archersmod.blocks.RubyOre;
 import com.archer.archersmod.blocks.ZagOre;
+import com.archer.archersmod.items.EmeraldSword;
 import com.archer.archersmod.items.RubyArmor;
 import com.archer.archersmod.items.RubyAxe;
 import com.archer.archersmod.items.RubyBlade;
@@ -96,6 +97,8 @@ public class ArchersMod {
 	public static final Item zagPickaxe = new ZagPickaxe(RUBY);
 	public static final Item zagSpade = new ZagSpade(RUBY);
 	public static final Item zagHoe = new ZagHoe(RUBY);
+	
+	public static final Item emeraldSword = new EmeraldSword(RUBY);
 
 	@Instance(value = "ArchersMod")
 	public static ArchersMod instance;
@@ -175,7 +178,8 @@ public class ArchersMod {
 			"BBB", "B B", 'B', zagIngot });
 		GameRegistry.addRecipe(new ItemStack(zagBootsArmor), new Object[] {
 			"B B", "B B", 'B', zagIngot });
-
+		GameRegistry.addRecipe(new ItemStack(emeraldSword), new Object[] {
+			" A ", " A ", " B ", 'A', Items.emerald, 'B', Items.stick });
 
 		GameRegistry.addSmelting(rubyOre, new ItemStack(rubyIngot), 1000F);
 		GameRegistry.addSmelting(zagOre, new ItemStack(zagIngot), 1000F);
@@ -231,5 +235,7 @@ public class ArchersMod {
 		GameRegistry.registerItem(rubyChestplateArmor, "ruby_chestplate_armor");
 		GameRegistry.registerItem(rubyHelmetArmor, "ruby_helmet_armor");
 		GameRegistry.registerItem(rubyLeggingsArmor, "ruby_leggings_armor");
+		
+		GameRegistry.registerItem(emeraldSword, "emerald_sword");
 	}
 }
