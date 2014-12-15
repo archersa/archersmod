@@ -15,6 +15,7 @@ import com.archer.archersmod.blocks.BlackIce;
 import com.archer.archersmod.blocks.RubyBlock;
 import com.archer.archersmod.blocks.RubyOre;
 import com.archer.archersmod.blocks.ZagOre;
+import com.archer.archersmod.items.EmeraldPickaxe;
 import com.archer.archersmod.items.EmeraldSword;
 import com.archer.archersmod.items.RubyArmor;
 import com.archer.archersmod.items.RubyAxe;
@@ -99,6 +100,7 @@ public class ArchersMod {
 	public static final Item zagHoe = new ZagHoe(RUBY);
 	
 	public static final Item emeraldSword = new EmeraldSword(RUBY);
+	public static final Item emeraldPickaxe = new EmeraldPickaxe(RUBY);
 
 	@Instance(value = "ArchersMod")
 	public static ArchersMod instance;
@@ -237,5 +239,6 @@ public class ArchersMod {
 		GameRegistry.registerItem(rubyLeggingsArmor, "ruby_leggings_armor");
 		
 		GameRegistry.registerItem(emeraldSword, "emerald_sword");
+		GameRegistry.registerItem(emeraldPickaxe, "emerald_pickaxe");
 	}
 }

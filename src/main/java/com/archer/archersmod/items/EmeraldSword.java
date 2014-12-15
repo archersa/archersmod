@@ -23,7 +23,7 @@ public class EmeraldSword extends ItemSword {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister par1IconRegister) {
 		this.itemIcon = par1IconRegister.registerIcon(ArchersMod.modid + ':'
-				+ "emerald_sword");
+				+ "eme	rald_sword");
 	}
 }
 
