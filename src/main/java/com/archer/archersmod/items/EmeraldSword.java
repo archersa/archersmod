@@ -27,6 +27,7 @@ public class EmeraldSword extends ItemSword {
 	private IIcon[] icons;
 	private IIcon itemIcon2;
 	private IIcon itemIcon1;
+	private IIcon itemIcon3;
 
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister par1IconRegister) {
@@ -34,6 +35,9 @@ public class EmeraldSword extends ItemSword {
 				+ "emerald_sword");
 		this.itemIcon2 = par1IconRegister.registerIcon(ArchersMod.modid + ':'
 				+ "emerald_sword_alt");
+		this.itemIcon3 = par1IconRegister.registerIcon(ArchersMod.modid + ':'
+				+ "emerald_sword_blue");
+
 		this.itemIcon = this.itemIcon1;
 	}
 
@@ -42,7 +46,7 @@ public class EmeraldSword extends ItemSword {
 		swingCounter++;
 		if (swingCounter % 2 == 0) {
 			swapIcon();
-		}
+		} 
 		return super.onEntitySwing(entityLiving, stack);
 	}
 
@@ -51,6 +55,8 @@ public class EmeraldSword extends ItemSword {
 	private void swapIcon() {
 		if (this.itemIcon == this.itemIcon1) {
 			this.itemIcon = this.itemIcon2;
+		} else if (itemIcon == this.itemIcon2) {
+			this.itemIcon = this.itemIcon3;
 		} else {
 			this.itemIcon = this.itemIcon1;
 		}
